@@ -2,13 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../Layout/Layout';
 
-const Main = () => (
+const Education = () => (
   <Layout>
     <Helmet>
-      <title>Portfolio</title>
+      <title>Education</title>
     </Helmet>
-    <h1>Main</h1>
+    <h1>Education</h1>
   </Layout>
 );
 
-export default Main;
+export default Education;
