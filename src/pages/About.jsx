@@ -10,7 +10,6 @@ const About = () => (
     <main>
       <section>
         <h1 className="big-heading">About</h1>
-        <hr />
       </section>
     </main>
   </Layout>
