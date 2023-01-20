@@ -7,7 +7,11 @@ const Education = () => (
     <Helmet>
       <title>Education</title>
     </Helmet>
-    <h1>Education</h1>
+    <main>
+      <section>
+        <h1 className="big-heading">Education</h1>
+      </section>
+    </main>
   </Layout>
 );
 

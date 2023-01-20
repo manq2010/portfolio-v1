@@ -7,7 +7,12 @@ const About = () => (
     <Helmet>
       <title>About | Portfolio</title>
     </Helmet>
-    <h1>About</h1>
+    <main>
+      <section>
+        <h1 className="big-heading">About</h1>
+        <hr />
+      </section>
+    </main>
   </Layout>
 );
 

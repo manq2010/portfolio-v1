@@ -50,8 +50,7 @@ const variables = css`
 
 
 // handle transition effect
---transition-effect: 
---transition: all 0.3s var(--easing-transition);
+--transition-effect: all 0.3s var(--easing-transition);
 
 // handle hamburger
 --hamburger-width: 3rem;
@@ -59,7 +58,6 @@ const variables = css`
 --hamburger-before-active: top 0.12s ease-out, opacity 0.12s ease-out 0.14s;
 --hamburger-after: bottom 0.12s ease-in 0.26s, transform 0.24s var(--easing-hamburger);
 --hamburger-after-active: bottom 0.12s ease-out, transform 0.24s var(--easing-hamburger-active);
-
 }
 `;
 

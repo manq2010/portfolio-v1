@@ -7,7 +7,11 @@ const Projects = () => (
     <Helmet>
       <title>Projects | Portfolio</title>
     </Helmet>
-    <h1>Projects</h1>
+    <main>
+      <section>
+        <h1 className="big-heading">Projects</h1>
+      </section>
+    </main>
   </Layout>
 );
 

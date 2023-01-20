@@ -7,7 +7,11 @@ const Contact = () => (
     <Helmet>
       <title>Contact | Porfolio</title>
     </Helmet>
-    <h1>Contact</h1>
+    <main>
+      <section>
+        <h1 className="big-heading">Contact</h1>
+      </section>
+    </main>
 
   </Layout>
 );

@@ -7,7 +7,11 @@ const Main = () => (
     <Helmet>
       <title>Portfolio</title>
     </Helmet>
-    <h1>Main</h1>
+    <main>
+      <h1 className="big-heading">Main</h1>
+      <hr />
+      <section />
+    </main>
   </Layout>
 );
 

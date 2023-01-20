@@ -7,7 +7,11 @@ const Experience = () => (
     <Helmet>
       <title>Experience | Portfolio</title>
     </Helmet>
-    <h1>Experience</h1>
+    <main>
+      <section>
+        <h1 className="big-heading">Experience</h1>
+      </section>
+    </main>
   </Layout>
 );
 
