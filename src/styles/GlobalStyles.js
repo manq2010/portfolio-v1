@@ -1,8 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import variables from './variables';
+import TransitionStyles from './TransitionStyles';
+import mixins from './mixins';
 
 const GlobalStyle = createGlobalStyle`
 ${variables}
+${TransitionStyles}
 
 html {
   box-sizing: border-box;
@@ -183,7 +186,6 @@ svg {
   }
 }
 
-
 a {
   display: inline-block;
   text-decoration: none;
@@ -196,9 +198,9 @@ a {
     color: var(--secondary);
   }
 
-  // &.inline-link {
-  //   
-  // }
+  &.inline-link {
+    ${mixins.smallButton}
+  }
 }
 
 button {

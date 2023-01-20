@@ -10,7 +10,9 @@ const Main = () => (
     <main>
       <h1 className="big-heading">Main</h1>
       <hr />
-      <section />
+      <section>
+        <a href="about" className="inline-link">about</a>
+      </section>
     </main>
   </Layout>
 );

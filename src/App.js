@@ -5,6 +5,7 @@ import GlobalStyle from './styles/GlobalStyles';
 
 const App = () => (
   <div className="app">
+
     <GlobalStyle />
     <Router>
       <AppRoutes />
