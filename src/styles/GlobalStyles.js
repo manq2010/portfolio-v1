@@ -129,7 +129,7 @@ h6 {
   margin: 0 0 10px 0;
   font-weight: 600;
   color: var(--tertiary-lightest);
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 .big-heading {

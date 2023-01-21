@@ -15,7 +15,7 @@ const variables = css`
 // handle tertiary colors
 --tertiary: #F3ECB0;
 --tertiary-light: #f5f0c0;
---tertiary-lightest: 
+--tertiary-lightest: #f9f6d8;
 
 // handle other colors
 --white: #fdfdfd;

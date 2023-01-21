@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import { v4 as uuidv4 } from 'uuid';
@@ -17,16 +17,47 @@ const HeroWrapper = styled.div`
     }
 
     h1 {
+      color: var(--secondary);
+      font-family: var(--font-mono);
+      font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
+      font-weight: 400;
+      line-height: 2;
+      margin: 0 0 20px 2px;
+      
+      @media (min-width: 480px){
+        margin: 0 0 30px 4px;
+      }
+    }
 
+    h3 {
+      margin-top: 5px;
+      color: var(--tertiary);
+      line-height: 1.2;
     }
 
     p {
         max-width: 500px;
     }
 
-    .linkedin-link {
-        ${mixins.bigButton}
+    .link {
+        ${mixins.smallButton}
+        margin-right: 10px;
       }
+
+    .cv-link {
+      ${mixins.smallButton}
+      margin-right: 10px;
+      color: var(--primary);
+      background-color:  var(--secondary);
+      border: 1px solid var(--primary);
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: var(--primary-lightest);
+        border: 1px solid var(--tertiary);
+        color: var(--tertiary)
+      }
+    }
 
     .hero-button-open {
         ${mixins.bigButton}
@@ -34,6 +65,19 @@ const HeroWrapper = styled.div`
 
     .hero-button-close {
         ${mixins.smallButton}
+        border: none;
+        &:hover,
+        &:focus,
+        &:active {
+        background-color: inherit;
+        border: none;
+      }
+
+      &:focus,
+      &:hover {
+        color: var(--tertiary);
+        transform: translateY(-3px);
+      }
     }
 
     .buttons {
@@ -67,8 +111,10 @@ const Hero = () => {
   const [showButton, setShowButton] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
   const nodeRef = useRef(null);
+
   const {
-    title, description, name, linkedIn,
+    title, description, name,
+    linkedIn, resumePdf, email,
   } = headerData;
 
   const one = <h1>Hi, my name is</h1>;
@@ -83,13 +129,14 @@ const Hero = () => {
   const items = [one, two, three, four];
   return (
     <HeroWrapper>
-      {
-    items.map((item) => (
-      <div key={uuidv4()}>{item}</div>
-    ))
-}
+      {items.map((item) => (
+        <div key={uuidv4()}>{ item }</div>
+      ))}
 
-      <div className="buttons">
+      <div
+        className="buttons"
+      >
+
         {showButton && (
         <button
           type="button"
@@ -99,6 +146,7 @@ const Hero = () => {
           Connect with me
         </button>
         )}
+
         <CSSTransition
           in={showMessage}
           nodeRef={nodeRef}
@@ -112,27 +160,31 @@ const Hero = () => {
             ref={nodeRef}
           >
             <a
-              className="linkedin-link"
+              className="link"
               href={linkedIn}
-              download="resume"
               target="_blank"
               rel="noreferrer"
-              onClick={() => setShowMessage(false)}
-              onBlur={() => setShowMessage(false)}
             >
               LinkedIn
             </a>
             <a
-              className="linkedin-link"
-              href={linkedIn}
+              className="link"
+              href={`mailto:${email}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Email
+            </a>
+            <a
+              className="cv-link"
+              href={resumePdf}
               download="resume"
               target="_blank"
               rel="noreferrer"
               onClick={() => setShowMessage(false)}
             >
-              Email
+              Download CV
             </a>
-
             <button
               type="button"
               onClick={() => setShowMessage(false)}
@@ -140,7 +192,6 @@ const Hero = () => {
             >
               <CloseIcon />
             </button>
-
           </div>
         </CSSTransition>
       </div>
