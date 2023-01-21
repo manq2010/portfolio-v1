@@ -85,42 +85,22 @@ main {
   margin: 0 auto;
   width: 100%;
   min-height: 100vh;
-  padding: 10rem 2rem;
+  padding: 0 12.5px;
 
   @media (min-width: 480px){
-    padding: 12.5rem 2.5rem;
+    padding: 0 25px;
   }
 
   @media (min-width: 768px){
-    padding: 15rem 5rem;
+    padding: 0 50px;
   }
 
   @media (min-width: 1080px){
-    padding: 20rem 10rem;
+    padding: 0 100px;
   }
 
   @media (min-width: 1200px){
-    padding: 20rem 15rem;
-  }
-
-  &.fill {
-    padding: 0 1.25rem;
-
-  @media (min-width: 480px){
-    padding: 0 2.5rem;
-  }
-
-  @media (min-width: 768px){
-    padding: 0 5rem;
-  }
-
-  @media (min-width: 1080px){
-    padding: 0 10rem;
-  }
-
-  @media (min-width: 1200px){
-    padding: 0 15rem;
-  }
+    padding: 0 150px;
   }
 }
 
@@ -128,15 +108,15 @@ section {
   padding: 4rem 0;
   
   @media (min-width: 480px) {
-    padding: 6rem 0;
+    padding: 60px 0;
   }
   
   @media (min-width: 768px) {
-    padding: 8rem 0;
+    padding: 80px 0;
   }
 
   @media (min-width: 1200px){
-    padding: 10rem 0;
+    padding: 100px 0;
   }
 }
 
@@ -153,11 +133,11 @@ h6 {
 }
 
 .big-heading {
-  font-size: clamp(4rem, 8vw, 8rem);
+  font-size: clamp(40px, 8vw, 80px);
 }
 
 .medium-heading {
-  font-size: clamp(4rem, 8vw, 6rem);
+  font-size: clamp(40px, 8vw, 60px);
 }
 
 .small-heading {
@@ -166,7 +146,7 @@ h6 {
   position: relative;
   margin: 10px 0 40px;
   width: 100%;
-  font-size: clamp(2.6rem, 5vw, var(--fz-heading));
+  font-size: clamp(26px, 5vw, var(--fs-heading));
   white-space: nowrap;
 }
 
@@ -235,9 +215,9 @@ p {
     margin: 0;
   }
 
-  // & > a {
-    
-  // }
+  & > a {
+    ${mixins.inlineLink}
+  }
 
 }
 

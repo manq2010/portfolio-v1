@@ -26,20 +26,20 @@ sans-serif;
 --font-mono-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
 // handle font-sizes
---fs-heading: 3.5rem;
---fs-xxl: 2.5rem;
---fs-xl: 2.2rem;
---fs-l: 2rem;
---fs-m: 1.8rem;
---fs-s: 1.6rem;
---fs-xs: 1.4rem;
---fs-xxs: 1.2rem;
+--fs-heading: 35px;
+--fs-xxl: 25px;
+--fs-xl: 22px;
+--fs-l: 20px;
+--fs-m: 18px;
+--fs-s: 16px;
+--fs-xs: 14px;
+--fs-xxs: 12px;
 
 // handle border radius
---border-radius: 0.5rem;
+--border-radius: 5px;
 
 // handle navbar
---navbar-height: 10rem;
+--navbar-height: 100px;
 
 // handle cubic-bezier curves
 // https://easings.net/
@@ -54,7 +54,7 @@ sans-serif;
 --transition-effect: all 0.3s var(--easing-transition);
 
 // handle hamburger
---hamburger-width: 3rem;
+--hamburger-width: 30px;
 --hamburger-before: top 0.12s ease-in 0.26s, opacity 0.12s ease-in;
 --hamburger-before-active: top 0.12s ease-out, opacity 0.12s ease-out 0.14s;
 --hamburger-after: bottom 0.12s ease-in 0.26s, transform 0.24s var(--easing-hamburger);
