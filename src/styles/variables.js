@@ -21,8 +21,9 @@ const variables = css`
 --white: #fdfdfd;
 
 // handle font family
---font-main-family: 'Calibre', 'Inter',system-ui,
---font-mono-family: 'SF Mono','Roboto Mono', monospace;
+--font-main-family:  'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
+sans-serif;
+--font-mono-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
 // handle font-sizes
 --fs-heading: 3.5rem;

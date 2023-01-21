@@ -2,10 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import variables from './variables';
 import TransitionStyles from './TransitionStyles';
 import mixins from './mixins';
+import fontFaces from './fonts';
 
 const GlobalStyle = createGlobalStyle`
 ${variables}
 ${TransitionStyles}
+${fontFaces}
 
 html {
   box-sizing: border-box;
