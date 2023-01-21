@@ -1,18 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import About from '../components/About';
 import Layout from '../Layout/Layout';
 
-const About = () => (
+const AboutPage = () => (
   <Layout>
     <Helmet>
       <title>About | Portfolio</title>
     </Helmet>
     <main>
-      <section>
-        <h1 className="big-heading">About</h1>
-      </section>
+      <About />
     </main>
   </Layout>
 );
 
-export default About;
+export default AboutPage;
