@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import experienceData from '../data/experienceData';
@@ -109,27 +110,32 @@ const Experience = () => {
           ))}
           <StyledHighlight activeTab={activeTab} />
         </TabListContainer>
-        <JobDetails>
-          <h3>
-            <span>{experienceData[activeTab].jobtitle}</span>
-            <span className="company">
+        <CSSTransition in={activeTab !== 0} timeout={250} classNames="fade">
+          <JobDetails>
+            <h3>
+              <span>{experienceData[activeTab].jobTitle}</span>
+              <span className="company">
                   &nbsp;@&nbsp;
-              <a href={experienceData[activeTab].url} className="inline-link">
-                {experienceData[activeTab].company}
-              </a>
-            </span>
-          </h3>
-          <p className="range">{experienceData[activeTab].range}</p>
+                <a href={experienceData[activeTab].url} className="inline-link">
+                  {experienceData[activeTab].company}
+                </a>
+              </span>
+            </h3>
+            <p className="range">{experienceData[activeTab].range}</p>
 
-          <ul>
-            {
-                  experienceData[activeTab].points
-                  && (
+            <ul>
+              {
                     experienceData[activeTab].points
-                      .map((point) => <li key={uuidv4()}><p>{point}</p></li>))
-                  }
-          </ul>
-        </JobDetails>
+                    && (
+                      experienceData[activeTab].points
+                        .map((point) => (
+                          <li key={uuidv4()}>{point}</li>
+                        ))
+                    )
+              }
+            </ul>
+          </JobDetails>
+        </CSSTransition>
       </div>
     </ExperienceWrapper>
   );
