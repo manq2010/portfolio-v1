@@ -1,18 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Experience from '../components/Experience';
 import Layout from '../Layout/Layout';
 
-const Experience = () => (
+const ExperiencePage = () => (
   <Layout>
     <Helmet>
       <title>Experience | Portfolio</title>
     </Helmet>
     <main>
-      <section>
-        <h1 className="big-heading">Experience</h1>
-      </section>
+      <Experience />
     </main>
   </Layout>
 );
 
-export default Experience;
+export default ExperiencePage;

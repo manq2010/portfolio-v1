@@ -135,7 +135,7 @@ const Contact = () => {
               href={`mailto:${contactsData.email}`}
               onClick={() => setShowMessage(false)}
             >
-              Mail
+              eMail
             </a>
             <a
               className="link"
