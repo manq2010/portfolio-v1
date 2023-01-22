@@ -1,19 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Contact from '../components/Contact';
 import Layout from '../Layout/Layout';
 
-const Contact = () => (
+const ContactPage = () => (
   <Layout>
     <Helmet>
       <title>Contact | Porfolio</title>
     </Helmet>
     <main>
-      <section>
-        <h1 className="big-heading">Contact</h1>
-      </section>
+      <Contact />
     </main>
-
   </Layout>
 );
 
-export default Contact;
+export default ContactPage;

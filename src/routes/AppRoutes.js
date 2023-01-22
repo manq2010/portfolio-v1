@@ -4,7 +4,7 @@ import AboutPage from '../pages/About';
 import Experience from '../pages/Experience';
 import Main from '../pages/Main';
 import Projects from '../pages/Projects';
-import Contact from '../pages/Contact';
+import ContactPage from '../pages/Contact';
 import EducationPage from '../pages/Education';
 
 const AppRoutes = () => (
@@ -13,7 +13,7 @@ const AppRoutes = () => (
     <Route path="/projects" element={<Projects />} />
     <Route path="/about" element={<AboutPage />} />
     <Route path="/experience" element={<Experience />} />
-    <Route path="/contact" element={<Contact />} />
+    <Route path="/contact" element={<ContactPage />} />
     <Route path="/education" element={<EducationPage />} />
   </Routes>
 );
