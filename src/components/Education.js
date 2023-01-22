@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import CloseIcon from '@mui/icons-material/Close';
 import sr from '../utils/sr';
 import { srConfig } from '../utils/config';
 import educationData from '../data/educationData';
@@ -52,6 +51,52 @@ h3 {
   font-family: var(--font-mono);
   font-size: var(--fz-xs);
 }
+
+.education-item-wrapper {
+    margin-top: 20px;
+}
+
+.credential-button-open {
+    ${mixins.smallButton}
+}
+
+.credential-button-close {
+    ${mixins.smallButton}
+    color: var(--primary);
+    background-color:  var(--secondary);
+    border: 1px solid var(--primary);
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--primary-lightest);
+      border: 1px solid var(--tertiary);
+      color: var(--tertiary)
+    }
+}
+
+.link {
+    ${mixins.smallButton}
+    margin: 0 10px 10px 0;
+  }
+
+.links-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.links-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.links-exit {
+  opacity: 1;
+}
+.links-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
 `;
 
 const Education = () => {
@@ -77,8 +122,8 @@ const Education = () => {
           <div className="education-data">
             <div>
               {educationData.map((education) => (
-                <>
-                  <div key={education.id} className="education-item">
+                <div key={education.id} className="education-item-wrapper">
+                  <div className="education-item">
                     <h4>
                       <span className="company">
                         @&nbsp;
@@ -100,16 +145,20 @@ const Education = () => {
                       ) : ('Current')}
                     </div>
                   </div>
-                  <div>
+                  <div className="credentials">
                     { education.accreditation ? (
                       <>
                         {showButton && (
                         <button
                           type="button"
                           onClick={() => setShowMessage(true)}
-                          className="hero-button-open"
+                          className="credential-button-open"
                         >
-                          Show accreditations
+                          Show
+                          {' '}
+                          {education.institution}
+                          {' '}
+                          accreditations
                         </button>
                         )}
 
@@ -125,28 +174,42 @@ const Education = () => {
                           <div
                             ref={nodeRef}
                           >
-                            <a
-                              className="link"
-                              href="test"
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Test
-                            </a>
+
+                            <ul className="accreditation-list">
+                              {
+                              education.accreditation.map((
+                                { id, credentialName, credentialUrl },
+                              ) => (
+                                <a
+                                  key={id}
+                                  className="link"
+                                  href={credentialUrl}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  {credentialName}
+                                </a>
+                              ))
+                            }
+                            </ul>
 
                             <button
                               type="button"
                               onClick={() => setShowMessage(false)}
-                              className="hero-button-close"
+                              className="credential-button-close"
                             >
-                              <CloseIcon />
+                              Hide
+                              {' '}
+                              {education.institution}
+                              {' '}
+                              accreditations
                             </button>
                           </div>
                         </CSSTransition>
                       </>
                     ) : ('')}
                   </div>
-                </>
+                </div>
               ))}
             </div>
           </div>
