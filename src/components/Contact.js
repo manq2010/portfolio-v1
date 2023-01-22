@@ -114,7 +114,7 @@ const Contact = () => {
           onClick={() => setShowMessage(true)}
           className="contact-button-open"
         >
-          Hit me up on
+          Hit me up on ...
         </button>
         )}
 
@@ -130,7 +130,11 @@ const Contact = () => {
           <div
             ref={nodeRef}
           >
-            <a className="link" href={`mailto:${contactsData.email}`}>
+            <a
+              className="link"
+              href={`mailto:${contactsData.email}`}
+              onClick={() => setShowMessage(false)}
+            >
               Mail
             </a>
             <a
@@ -138,6 +142,7 @@ const Contact = () => {
               href={contactsData.linkedIn}
               target="_blank"
               rel="noreferrer"
+              onClick={() => setShowMessage(false)}
             >
               LinkedIn
             </a>
