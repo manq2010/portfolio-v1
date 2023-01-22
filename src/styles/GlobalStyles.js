@@ -62,7 +62,7 @@ body {
   min-width: 100%;
   overflow-x: hidden;
   margin: 0;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-l);
   line-height: 1.2;
   font-family: var(--font-main-family);
   
@@ -181,7 +181,7 @@ a {
   }
 
   &.inline-link {
-    ${mixins.smallButton}
+    ${mixins.inlineLink}
   }
 }
 
@@ -218,7 +218,6 @@ p {
   & > a {
     ${mixins.inlineLink}
   }
-
 }
 
 ul {

@@ -19,7 +19,7 @@ const HeroWrapper = styled.div`
     h1 {
       color: var(--secondary);
       font-family: var(--font-mono);
-      font-size: clamp(var(--fs-sm), 5vw, var(--fs-md));
+      font-size: clamp(var(--fs-s), 5vw, var(--fs-m));
       font-weight: 400;
       line-height: 2;
       margin: 0 0 20px 2px;

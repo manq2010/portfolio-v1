@@ -16,15 +16,33 @@ const mixins = {
   inlineLink: css`
     display: inline-block;
     text-decoration: none;
-    color: inherit;
+    text-decoration-skip-ink: auto;
     position: relative;
     transition: var(--transition-effect);
-
+    color: var(--secondary);
     &:hover,
-    &:active,
-    &:focus {
+    &:focus,
+    &:active {
       color: var(--secondary);
       outline: 0;
+      &:after {
+        width: 100%;
+      }
+      & > * {
+        color: var(--secondary) !important;
+        transition: var(--transition-effect);
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      position: relative;
+      bottom: 0.1rem;
+      background-color: var(--secondary);
+      transition: var(--transition-effect);
+      opacity: 0.8;
     }
 `,
 
@@ -59,7 +77,7 @@ const mixins = {
     border: 1px solid var(--secondary);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
-    font-size: var(--fs-sm);
+    font-size: var(--fs-s);
     font-family: var(--font-mono-family);
     line-height: 1;
     text-decoration: none;
@@ -92,7 +110,7 @@ const mixins = {
     padding: 0;
     margin: 0;
     list-style: none;
-    font-size: var(--fs-lg);
+    font-size: var(--fs-l);
 
     li {
       position: relative;

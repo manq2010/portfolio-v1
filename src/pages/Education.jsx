@@ -1,18 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import Education from '../components/Education';
 import Layout from '../Layout/Layout';
 
-const Education = () => (
+const EducationPage = () => (
   <Layout>
     <Helmet>
       <title>Education</title>
     </Helmet>
     <main>
-      <section>
-        <h1 className="big-heading">Education</h1>
-      </section>
+      <Education />
     </main>
   </Layout>
 );
 
-export default Education;
+export default EducationPage;

@@ -26,13 +26,13 @@ sans-serif;
 --font-mono-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
 
 // handle font-sizes
---fs-heading: 35px;
---fs-xxl: 25px;
---fs-xl: 22px;
---fs-l: 20px;
---fs-m: 18px;
---fs-s: 16px;
---fs-xs: 14px;
+--fs-heading: 33px;
+--fs-xxl: 22px;
+--fs-xl: 20px;
+--fs-l: 18px;
+--fs-m: 16px;
+--fs-s: 14px;
+--fs-xs: 13px;
 --fs-xxs: 12px;
 
 // handle border radius

@@ -5,7 +5,7 @@ import Experience from '../pages/Experience';
 import Main from '../pages/Main';
 import Projects from '../pages/Projects';
 import Contact from '../pages/Contact';
-import Education from '../pages/Education';
+import EducationPage from '../pages/Education';
 
 const AppRoutes = () => (
   <Routes>
@@ -14,7 +14,7 @@ const AppRoutes = () => (
     <Route path="/about" element={<AboutPage />} />
     <Route path="/experience" element={<Experience />} />
     <Route path="/contact" element={<Contact />} />
-    <Route path="/education" element={<Education />} />
+    <Route path="/education" element={<EducationPage />} />
   </Routes>
 );
 

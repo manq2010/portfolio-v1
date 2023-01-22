@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { v4 as uuidv4 } from 'uuid';
 import about from '../data/aboutData';
 import mixins from '../styles/mixins';
 import { loaderDelay } from '../utils/delays';
+import { srConfig } from '../utils/config';
+import sr from '../utils/sr';
 
 const AboutWrapper = styled.section`
 // max-width: 900px;
@@ -36,7 +38,7 @@ const AboutItems = styled.div`
             font-size: var(--fs-xs);
         
             &:before {
-              font-size: var(--fs-sm);
+              font-size: var(--fs-s);
               line-height: 12px;
             }
           }
@@ -100,6 +102,11 @@ const About = () => {
 
   const [isMounted, setIsMounted] = useState(false);
 
+  const revealContainer = useRef(null);
+  useEffect(() => {
+    sr.reveal(revealContainer.current, srConfig());
+  }, []);
+
   useEffect(() => {
     // const timeout = setTimeout(() => setIsMounted(true));
     const timeout = setTimeout(() => {
@@ -122,7 +129,7 @@ const About = () => {
 
   const items = [one, two, three, four, five];
   return (
-    <AboutWrapper id="about">
+    <AboutWrapper id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
       <div className="inner">
         { isMounted
