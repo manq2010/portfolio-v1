@@ -6,15 +6,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import headerData from '../data/headerData';
 import mixins from '../styles/mixins';
 
-const HeroWrapper = styled.div`
+const HeroWrapper = styled.section`
     ${mixins.flexCenter}
     flex-direction: column;
     align-items: start;
-    padding-top: var(--navbar-height);
-    height: auto;
-
-    @media (min-width: 1200px){
-    }
 
     h1 {
       color: var(--secondary);
@@ -36,7 +31,7 @@ const HeroWrapper = styled.div`
     }
 
     p {
-        max-width: 500px;
+        max-width: 520px;
     }
 
     .link {

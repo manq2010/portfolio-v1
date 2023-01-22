@@ -66,7 +66,7 @@ body {
   line-height: 1.2;
   font-family: var(--font-main-family);
   
-  @media (min-width: ){
+  @media (min-width: 768){
     font-size:  var(--fs-xl);
   }
 
@@ -84,7 +84,7 @@ body {
 main {
   margin: 0 auto;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 0 12.5px;
 
   @media (min-width: 480px){
@@ -93,6 +93,7 @@ main {
 
   @media (min-width: 768px){
     padding: 0 50px;
+    min-height: 90vh;
   }
 
   @media (min-width: 1080px){
@@ -116,7 +117,6 @@ section {
   }
 
   @media (min-width: 1200px){
-    padding: 100px 0;
   }
 }
 
@@ -173,7 +173,7 @@ a {
   text-decoration: none;
   color: inherit;
   position: relative;
-  transition: var(--transition);
+  transition: var(--transition-effect);
 
   &:hover,
   &:focus {
