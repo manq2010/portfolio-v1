@@ -78,25 +78,6 @@ h3 {
     ${mixins.smallButton}
     margin: 0 10px 10px 0;
   }
-
-.links-enter {
-  opacity: 0;
-  transform: scale(0.9);
-}
-.links-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.links-exit {
-  opacity: 1;
-}
-.links-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
-}
-
 `;
 
 const Education = () => {

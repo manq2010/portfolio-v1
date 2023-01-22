@@ -62,11 +62,7 @@ const StyledHighlight = styled.div`
 `;
 
 const JobDetails = styled.div`
-// padding-: 20px;
-  // background-color: #f2f2f2;
-
 margin-left: 20px;
-
 width: 100%;
 height: auto;
 padding: 10px 5px;
@@ -94,7 +90,7 @@ h3 {
 }
 `;
 
-function Experience() {
+const Experience = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -114,9 +110,6 @@ function Experience() {
           <StyledHighlight activeTab={activeTab} />
         </TabListContainer>
         <JobDetails>
-          <h3>{experienceData[activeTab].jobTitle}</h3>
-          {/* <p>{workExperience[activeTab].details}</p> */}
-
           <h3>
             <span>{experienceData[activeTab].jobtitle}</span>
             <span className="company">
@@ -140,6 +133,6 @@ function Experience() {
       </div>
     </ExperienceWrapper>
   );
-}
+};
 
 export default Experience;
