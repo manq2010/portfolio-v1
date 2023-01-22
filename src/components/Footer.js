@@ -6,7 +6,7 @@ import contactsData from '../data/contactsData';
 import mixins from '../styles/mixins';
 
 const FooterWrapper = styled.footer`
-${mixins.flexCenter};
+${mixins.flexCenter}
 flex-direction: column;
 height: auto;
 min-height: 70px;
@@ -26,7 +26,7 @@ display: none;
 }
 
 ul {
-  ${mixins.flexBetween};
+  ${mixins.flexBetween}
   padding: 0;
   margin: 0;
   list-style: none;
