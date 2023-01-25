@@ -84,7 +84,7 @@ body {
 main {
   margin: 0 auto;
   width: 100%;
-  min-height: 80vh;
+  min-height: 90vh;
   padding: 0 12.5px;
 
   @media (min-width: 480px){
@@ -93,7 +93,6 @@ main {
 
   @media (min-width: 768px){
     padding: 0 50px;
-    min-height: 90vh;
   }
 
   @media (min-width: 1080px){

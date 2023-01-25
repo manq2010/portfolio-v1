@@ -89,7 +89,7 @@ const Hero = () => {
   const nodeRef = useRef(null);
 
   const {
-    title, description, name,
+    title, description1, description2, name,
     linkedIn, resumePdf, email,
   } = headerData;
 
@@ -98,7 +98,16 @@ const Hero = () => {
   const three = <h3 className="big-heading">{title}</h3>;
   const four = (
     <p>
-      {description}
+      {description1}
+      {' '}
+      <a
+        href="/projects"
+        rel="noreferrer"
+      >
+        work
+      </a>
+      {'. '}
+      {description2}
     </p>
   );
 
