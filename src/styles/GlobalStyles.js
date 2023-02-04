@@ -105,18 +105,23 @@ main {
 }
 
 section {
-  padding: 4rem 0;
+  // padding: 4rem 0;
+  margin-left: 60px;
+  min-height: 100vh;
+  margin-top: 40px;
   
   @media (min-width: 480px) {
-    padding: 60px 0;
+    // padding: 60px 0;
+    margin-top: 60px;
   }
   
   @media (min-width: 768px) {
-    padding: 80px 0;
+    // padding: 80px 0;
+    margin-top: 80px;
   }
 
-  @media (min-width: 1200px){
-  }
+  // @media (min-width: 1200px){
+  // }
 }
 
 h1,

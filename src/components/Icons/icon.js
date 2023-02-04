@@ -4,6 +4,15 @@ import {
   IconGitHub,
   IconLinkedin,
   IconTwitter,
+  IconHome,
+  IconAbout,
+  IconEducation,
+  IconExperience,
+  IconProjects,
+  IconContact,
+  IconLogo,
+  IconClose,
+  IconHamburger,
 } from './index';
 
 const Icon = ({ name }) => {
@@ -14,8 +23,26 @@ const Icon = ({ name }) => {
       return <IconLinkedin />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Home':
+      return <IconHome />;
+    case 'About':
+      return <IconAbout />;
+    case 'Experience':
+      return <IconExperience />;
+    case 'Projects':
+      return <IconProjects />;
+    case 'Education':
+      return <IconEducation />;
+    case 'Contact':
+      return <IconContact />;
+    case 'Logo':
+      return <IconLogo />;
+    case 'Close':
+      return <IconClose />;
+    case 'Menu':
+      return <IconHamburger />;
     default:
-      return <IconGitHub />;
+      return <IconHome />;
   }
 };
 
