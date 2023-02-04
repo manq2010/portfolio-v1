@@ -26,6 +26,16 @@ const links = [
   },
   {
     id: 6,
+    url: '/skills',
+    name: 'Skills',
+  },
+  {
+    id: 7,
+    url: '/testimonials',
+    name: 'Testimonials',
+  },
+  {
+    id: 8,
     url: '/contact',
     name: 'Contact',
   },

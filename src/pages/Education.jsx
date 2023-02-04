@@ -6,7 +6,7 @@ import Layout from '../Layout/Layout';
 const EducationPage = () => (
   <Layout>
     <Helmet>
-      <title>Education</title>
+      <title>Education | Portfolio</title>
     </Helmet>
     <main>
       <Education />

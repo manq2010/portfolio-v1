@@ -13,6 +13,8 @@ import {
   IconLogo,
   IconClose,
   IconHamburger,
+  IconTestimonial,
+  IconSkills,
 } from './index';
 
 const Icon = ({ name }) => {
@@ -41,6 +43,10 @@ const Icon = ({ name }) => {
       return <IconClose />;
     case 'Menu':
       return <IconHamburger />;
+    case 'Skills':
+      return <IconSkills />;
+    case 'Testimonials':
+      return <IconTestimonial />;
     default:
       return <IconHome />;
   }

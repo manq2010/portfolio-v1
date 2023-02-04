@@ -10,3 +10,5 @@ export { default as IconAbout } from './iconsFiles/about';
 export { default as IconLogo } from './iconsFiles/logo';
 export { default as IconClose } from './iconsFiles/close';
 export { default as IconHamburger } from './iconsFiles/menu';
+export { default as IconSkills } from './iconsFiles/skills';
+export { default as IconTestimonial } from './iconsFiles/testimonial';

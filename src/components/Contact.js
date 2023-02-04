@@ -10,11 +10,11 @@ import mixins from '../styles/mixins';
 const ContactWrapper = styled.section`
 ${mixins.flexCenter}
 flex-direction: column;
-margin: 0 auto 50px;
+// margin: 0 auto;
 
 
 @media (min-width: 768px) {
-  margin: 0 auto 100px;
+  // margin: 0 auto 100px;
 }
 
 .overline {

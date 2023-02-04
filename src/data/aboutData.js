@@ -19,10 +19,6 @@ const aboutData = {
     id: 4,
     skill: 'Ruby',
   },
-  {
-    id: 5,
-    skill: 'PostgreSQL',
-  },
   ],
 };
 

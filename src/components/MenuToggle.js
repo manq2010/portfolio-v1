@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 import mixins from '../styles/mixins';
 import Icon from './Icons/icon';
 import links from '../data/links';
-// import Icon from './Icons/icon';
+import useOnClickOutside from '../hooks/useOnClickOutside';
 
 const NenuWrapper = styled.div`
   display: block;
@@ -24,9 +24,9 @@ ${mixins.flexCenter};
     background-color: transparent;
     color: inherit;
     text-transform: none;
-    transition-timing-function: linear;
-    transition-duration: 0.15s;
-    transition-property: opacity, filter;
+    // transition-timing-function: linear;
+    // transition-duration: 0.15s;
+    // transition-property: opacity, filter;
 
 
     @media (min-width: 768px) {
@@ -37,7 +37,7 @@ ${mixins.flexCenter};
         // display: inline-block;
         // position: relative;
         width: var(--hamburger-width);
-        height: 24px;
+        // height: 24px;
 
 
         transition-duration: 0.2s;
@@ -89,20 +89,12 @@ ${mixins.flexCenter};
     
         li {
           position: relative;
-          margin: 0 auto 20px;
+          margin: 0 auto 10px;
           font-size: clamp(var(--fs-sm), 4vw, var(--fs-lg));
-    
-          @media (max-width: 600px) {
-            margin: 0 auto 10px;
+          
+          @media (min-width: 600px) {
+              margin: 0 auto 20px;
           }
-    
-          // &:before {
-          //   content: "0" counter(item) ".";
-          //   display: block;
-          //   margin-bottom: 5px;
-          //   color: var(--secondary);
-          //   font-size: var(--fz-sm);
-          // }
 
           svg {
             width: 20px;
@@ -133,7 +125,11 @@ const MenuToggle = () => {
   };
 
   useEffect(() => {
-    window.removeEventListener('resize', onResize);
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
   }, []);
 
   const content = (
@@ -145,6 +141,7 @@ const MenuToggle = () => {
               to={link.url}
               aria-label={link.name}
               rel="noreferrer"
+              onClick={() => setMenuOpen(false)}
             >
               <Icon name={link.name} />
               {' '}
@@ -155,8 +152,8 @@ const MenuToggle = () => {
     </>
   );
 
-  //   const wrapperRef = useRef();
-  //   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
+  const wrapperRef = useRef();
+  useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
   return (
     <NenuWrapper className="menu">
@@ -164,7 +161,7 @@ const MenuToggle = () => {
         <body className={menuOpen ? 'blur' : ''} />
       </Helmet>
 
-      <div>
+      <div ref={wrapperRef}>
         <HamburgerButton
           onClick={toggleMenu}
           menuOpen={menuOpen}

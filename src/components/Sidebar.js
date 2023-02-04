@@ -40,24 +40,34 @@ const SideWrapper = styled.ul`
     font-family: var(--font-mono-family);
     line-height: 17px
 
-    
-    // &:first-of-type {
-    //   margin-top: 20px;
-    // }
-    
-    // &:last-of-type {
-    //   margin-bottom: 20px;
-    // }
-
-    &:hover,
-    &:focus {
-      transform: translateX(3px);
+    &:hover {
+      transform: translateX(-3px);
     }
+    
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+
     svg {
       width: 20px;
       height: 20px;
     }
+
+    .links-details {
+      display: none;
+      @media (min-width: 1080px){
+        display: inline-block;
+      }
+    }
+  
+    .link-item{
+      &:hover,
+      &:focus {
+        transform: translateX(-3px);
+      }
+    }
   }
+
 `;
 
 const Sidebar = () => {
@@ -70,10 +80,13 @@ const Sidebar = () => {
         to={link.url}
         aria-label={link.name}
         rel="noreferrer"
+        className="link-item"
       >
         <Icon name={link.name} />
         {' '}
-        {link.name}
+        <span className="links-details">
+          {link.name}
+        </span>
       </Link>
     </li>
   ))}

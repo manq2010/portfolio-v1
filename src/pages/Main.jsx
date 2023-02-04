@@ -8,7 +8,7 @@ const Main = () => (
     <Helmet>
       <title>Portfolio</title>
     </Helmet>
-    <main id="content-blur" className="">
+    <main>
       <Hero />
     </main>
   </Layout>

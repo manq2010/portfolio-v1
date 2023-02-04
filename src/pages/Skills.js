@@ -1,17 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../Layout/Layout';
-import Projects from '../components/Projects';
+import Skills from '../components/Projects';
 
-const ProjectsPage = () => (
+const SkillsPage = () => (
   <Layout>
     <Helmet>
-      <title>Projects | Portfolio</title>
+      <title>Skills | Portfolio</title>
     </Helmet>
     <main>
-      <Projects />
+      <Skills />
     </main>
   </Layout>
 );
 
-export default ProjectsPage;
+export default SkillsPage;

@@ -39,7 +39,8 @@ sans-serif;
 --border-radius: 5px;
 
 // handle navbar
---navbar-height: 100px;
+--navbar-height: 80px;
+--navbar-scroll-height: 60px;
 
 // handle cubic-bezier curves
 // https://easings.net/

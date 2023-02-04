@@ -11,12 +11,12 @@ import sr from '../utils/sr';
 const AboutWrapper = styled.section`
 // max-width: 900px;
   .inner {
-    display: grid;
+    display: block;
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
-
-    @media (max-width: 768px) {
-      display: block;
+    
+    @media (min-width: 768px) {
+      display: grid;
     }
   }
 `;
@@ -52,7 +52,7 @@ const AboutItems = styled.div`
 const AboutPicture = styled.div`
     position: relative;
     margin: 50px auto 0;
-    width: 70%;
+    width: 100%;
     
     @media (min-width: 768px) {
         max-width: 400px;
