@@ -3,22 +3,23 @@ import { css } from 'styled-components';
 const variables = css`
 :root {
 // handle primary colors
---primary: #2B3A55;
---primary-light: #404e66;
---primary-lightest: #808999;
---primary-shadow: #1a2333;
+--primary: #f8ede3;
+--primary-light: #f9f1e9;
+--primary-lightest: #fbf4ee;
+--primary-shadow: #c6beb6;
 
-// handle secondary colors
---secondary: #effae9;
---secondary-tint: #c6eeb3;
+// handle secondary color - darker
+--secondary: #635f5b;
+--secondary-tint: #958e88;
+
 
 // handle tertiary colors
---tertiary: #F3ECB0;
---tertiary-light: #f5f0c0;
---tertiary-lightest: #f9f6d8;
+--tertiary: #85586f;
+--tertiary-light: #9d798c;
+--tertiary-lightest: #b69ba9;
 
 // handle other colors
---white: #fdfdfd;
+--white: #e7dee2;
 
 // handle font family
 --font-main-family:  'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,

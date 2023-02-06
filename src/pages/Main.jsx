@@ -6,7 +6,7 @@ import Hero from '../components/Hero';
 const Main = () => (
   <Layout>
     <Helmet>
-      <title>Portfolio</title>
+      <title>Mancoba | Portfolio</title>
     </Helmet>
     <main>
       <Hero />
