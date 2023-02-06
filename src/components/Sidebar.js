@@ -9,32 +9,15 @@ const SideWrapper = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
+  border-right: 1px solid var(--tertiary-light);
   margin: 0;
   padding: 0;
   list-style: none;
-  // height: 100vh;
-
-  // &:before {
-  //     content: '';
-  //     display: block;
-  //     width: 1px;
-  //     height: 100%;
-  //     // margin: 0 auto;
-  //     margin: 0 40%;
-  //     background-color: var(--tertiary-light);
-  //   }
-
-  &:after {
-    content: '';
-    display: block;
-    width: 1px;
-    // height: 90px;
-    height: 10rem;
-    margin: 0 40%;
-    background-color: var(--tertiary-light);
-  }
+  height: 80vh;
 
   li {
+    margin-right: 10px;
     padding: 10px;
     font-size: var(--fs-s);
     font-family: var(--font-mono-family);

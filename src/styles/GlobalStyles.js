@@ -89,7 +89,7 @@ main {
   margin: 0 auto;
   width: 100%;
   // min-height: 90vh;
-  padding: 0 25px;
+  padding: 0 0 0 25px;
 
   @media (min-width: 480px){
     padding: 0 50px;
@@ -100,11 +100,11 @@ main {
   }
 
   @media (min-width: 1080px){
-    padding: 0 200px;
+    padding: 0 50px 0 250px;
   }
 
   @media (min-width: 1200px){
-    padding: 0 210px;
+    padding: 0 80px 0 280px;
   }
 }
 
@@ -145,11 +145,12 @@ h6 {
 }
 
 .big-heading {
-  font-size: clamp(40px, 8vw, 50px);
+  font-size: clamp(35px, 7vw, 60px);
+  width: 100%;
 }
 
 .medium-heading {
-  font-size: clamp(40px, 8vw, 60px);
+  font-size: clamp(30px, 6vw, 40px);
 }
 
 .small-heading {

@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const SideBarWrapper = styled.div`
-//   width: 40px;
+
   position: fixed;
-  bottom: 0;
   display: none;
-  left: ${(props) => (props.orientation === 'left' ? '0' : 'auto')};
   color: var(--tertiary-light);
+  left: ${(props) => (props.orientation === 'left' ? '0' : 'auto')};
 
   @media (min-width: 768px) {
-      display: inline-block;
+      display: flex;
       left: ${(props) => (props.orientation === 'left' ? '40px' : 'auto')};
     }
 
