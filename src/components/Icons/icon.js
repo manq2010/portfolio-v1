@@ -15,6 +15,7 @@ import {
   IconHamburger,
   IconTestimonial,
   IconSkills,
+  IconExternalLink,
 } from './index';
 
 const Icon = ({ name }) => {
@@ -47,6 +48,8 @@ const Icon = ({ name }) => {
       return <IconSkills />;
     case 'Testimonials':
       return <IconTestimonial />;
+    case 'External':
+      return <IconExternalLink />;
     default:
       return <IconHome />;
   }
