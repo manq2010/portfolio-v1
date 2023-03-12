@@ -20,6 +20,11 @@ const educationData = [
       credentialName: 'React & Redux',
       credentialUrl: 'https://www.credential.net/53f1f55a-aa60-4d2d-8ce7-efd620da68db#gs.nc8fnl',
     },
+    {
+      id: 4,
+      credentialName: 'Ruby & Databases',
+      credentialUrl: 'https://www.credential.net/4a606402-34d9-475a-8001-a11330748c11#gs.ru6u9o',
+    },
     ],
   },
   {
