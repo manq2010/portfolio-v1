@@ -224,7 +224,7 @@ const Projects = () => (
     <ProjectsGrid>
       {
         projects
-          && projects.map((project) => (
+          && projects.slice().reverse().map((project) => (
             <ProjectItem
               key={project.id}
             >
