@@ -30,7 +30,7 @@ display: flex;
 align-items: center;
 width: 100%;
 height: 42px;
-padding: 0 20px 2px;
+// padding: 0 20px 10px 10px;
 border-left: 2px solid var(--primary-lightest);
 background-color: transparent;
 color: ${({ isActive }) => (isActive ? 'var(--secondary)' : 'var(--tertiary)')};

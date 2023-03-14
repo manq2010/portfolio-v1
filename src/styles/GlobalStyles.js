@@ -89,7 +89,11 @@ main {
   margin: 0 auto;
   width: 100%;
   // min-height: 90vh;
-  padding: 0 0 0 25px;
+  padding: 0 0 0 15px;
+
+  @media (min-width: 320px){
+    padding: 0 25px;
+  }
 
   @media (min-width: 480px){
     padding: 0 50px;
