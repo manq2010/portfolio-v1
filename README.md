@@ -19,15 +19,6 @@ REQUIRED SECTIONS:
 - Acknowledgements
 - License
 
-After you're finished please remove all the comments and instructions!
--->
-
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-</div>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -55,9 +46,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Project <a name="about-project"></a>
+# 📖 My Portfolio <a name="about-project"></a>
 
-> "Project"
+> The first version of my portfolio highlights various aspects of my professional journey, including my education, experience, and projects.
 
 ## 🛠 Built With <a name="built-with"></a>
 - HTML
@@ -82,7 +73,7 @@ After you're finished please remove all the comments and instructions!
 
 > Using the project will help you to : 
 
-- **Be able so do basic calculations**
+- **Be able so see all my projecs**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -90,7 +81,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://mancobasihlongonyane.onrender.com/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,7 +103,7 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository by using the command line : 
-- `git clone https://github.com/manq2010/<repo>`
+- `git clone https://github.com/manq2010/portfolio-v1`
 
 ### Install
 
@@ -157,7 +148,7 @@ You can deploy this project using:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Use Fragments and more hooks ⏳⌛️**
+- **Use Rails API ⏳⌛️**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,7 +174,7 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Thank you [Microverse](https://www.microverse.org/) for the project
+- Thank you all my friends in the industry for pushing me to work on my portfolio.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,7 +185,7 @@ Give a ⭐️ if you like this project!
 
 - **How to use the project**
 
-  - ```git clone https://github.com/manq2010/math-magicians```
+  - ```git clone https://github.com/manq2010/portfolio-v1```
 
 - **How to contribute to the project**
 
@@ -206,6 +197,6 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
