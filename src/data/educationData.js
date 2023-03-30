@@ -25,6 +25,11 @@ const educationData = [
       credentialName: 'Ruby & Databases',
       credentialUrl: 'https://www.credential.net/4a606402-34d9-475a-8001-a11330748c11#gs.ru6u9o',
     },
+    {
+      id: 5,
+      credentialName: 'Ruby on Rails',
+      credentialUrl: 'https://www.credential.net/413793ad-2418-4556-a59d-64c8b350d080#gs.tyb7tw',
+    },
     ],
   },
   {

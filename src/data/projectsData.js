@@ -2,6 +2,7 @@ import leaderboard from '../assets/leaderboard.png';
 import bookstore from '../assets/bookstore.png';
 import beerlover from '../assets/beerlover.png';
 import catolog from '../assets/catolog.png';
+import categories from '../assets/categories.png';
 
 const projects = [
   // projects can be added an removed
@@ -44,6 +45,16 @@ const projects = [
     sourceCode: 'https://github.com/manq2010/catalog-of-my-things',
     livePreview: 'https://github.com/manq2010/catalog-of-my-things',
     image: catolog,
+  },
+  {
+    id: 5,
+    name: 'Catalog of my things',
+    description:
+          'In this project, a console app created that keep a record of different types of items owned: books, music albums, movies, and games',
+    stack: ['Ruby', 'Rspec', 'Rails'],
+    sourceCode: 'https://github.com/manq2010/budget-app',
+    livePreview: 'https://github.com/manq2010/catalog-of-my-things',
+    image: categories,
   },
 ];
 

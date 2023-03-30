@@ -203,7 +203,6 @@ align-items: center;
   a {
     width: 100%;
     height: 100%;
-    background-color: var(--secondary);
     border-radius: var(--border-radius);
     vertical-align: middle;
   }
