@@ -1,18 +1,18 @@
 const experienceData = [
-  // {
-  //   id: 0,
-  //   company: 'Microverse',
-  //   url: 'https://www.microverse.org/',
-  //   jobTitle: 'Mentor (Volunteer)',
-  //   range: 'October 2022 - Current',
-  //   startYear: 'October 2022',
-  //   endYear: 'Current',
-  //   points: [
-  //     'Mentored junior web developers, providing technical,support through code reviews.',
-  //     'Proposed improvements to code organization to improve code quality and overall performance.',
-  //     'Provided advice and tips on how to maintain motivation to maintain longevity in the program.',
-  //   ],
-  // },
+  {
+    id: 0,
+    company: 'Microverse',
+    url: 'https://www.microverse.org/',
+    jobTitle: 'Mentor (Volunteer)',
+    range: 'October 2022 - Current',
+    startYear: 'October 2022',
+    endYear: 'Current',
+    points: [
+      'Mentored junior web developers, providing technical,support through code reviews.',
+      'Proposed improvements to code organization to improve code quality and overall performance.',
+      'Provided advice and tips on how to maintain motivation to maintain longevity in the program.',
+    ],
+  },
   {
     id: 1,
     company: 'MTN',
@@ -36,7 +36,7 @@ const experienceData = [
   {
     id: 2,
     company: 'Wits Business Intelligence Services',
-    url: '',
+    url: 'https://www.microverse.org/',
     jobTitle: 'Frontend Developer',
     range: 'July - December 2017',
     startYear: '2018',
