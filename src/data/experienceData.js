@@ -42,8 +42,12 @@ const experienceData = [
     startYear: '2018',
     endYear: '2019',
     points: [
-      'Gain experience in all aspects of business intelligence and data warehousing including multi-dimensional design and sourcing and moving data into the warehouse using Oracles modern Oracle Data Integrator platform.',
-      'I also produced reports and dashboards for data analysis',
+      'Conducted in-depth data analysis and developed predictive models using statistical and machine learning techniques to help clients make informed business decisions.',
+      'Maintained and optimized databases, ensuring data quality and accuracy through the use of ETL processes and data cleansing techniques.',
+      "Stayed up-to-date with the latest trends and technologies in data science and engineering, contributing to the organization's research and development efforts.",
+      'Collaborated with clients and team members to identify and address business needs, developing effective strategies to deliver results that met or exceeded client expectations.',
+      'Documented project plans, data analysis methodologies, and code, ensuring knowledge transfer and facilitating future project management.',
+      'Contributed to a collaborative team environment, working closely with data scientists, data engineers, and other stakeholders to deliver successful projects that met or exceeded organizational objectives.',
     ],
   },
 ];
