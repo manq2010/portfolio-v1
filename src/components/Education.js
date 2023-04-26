@@ -108,7 +108,7 @@ const Education = () => {
                     <h4>
                       <span className="company">
                         @&nbsp;
-                        <a href={education.url} className="inline-link">
+                        <a href={education.url} className="inline-link" target="_blank" rel="noreferrer">
                           {education.institution}
                         </a>
                       </span>

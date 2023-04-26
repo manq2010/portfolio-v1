@@ -116,7 +116,7 @@ const Experience = () => {
               <span>{experienceData[activeTab].jobTitle}</span>
               <span className="company">
                   &nbsp;@&nbsp;
-                <a href={experienceData[activeTab].url} className="inline-link">
+                <a href={experienceData[activeTab].url} className="inline-link" target="_blank" rel="noreferrer">
                   {experienceData[activeTab].company}
                 </a>
               </span>

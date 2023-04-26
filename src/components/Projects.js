@@ -229,7 +229,7 @@ const Projects = () => (
             >
               <div className="project-content">
                 <h3 className="project-title">
-                  <a href={project.sourceCode}>{project.name}</a>
+                  <a href={project.sourceCode} target="_blank" rel="noreferrer">{project.name}</a>
                 </h3>
 
                 <div
@@ -263,7 +263,7 @@ const Projects = () => (
               </div>
 
               <div className="project-image">
-                <a href={project.livePreview || (project.sourceCode || '#')}>
+                <a href={project.livePreview || (project.sourceCode || '#')} target="_blank" rel="noreferrer">
                   <img src={project.image} alt={project.name} className="img" />
                 </a>
               </div>
