@@ -48,12 +48,12 @@ const projects = [
   },
   {
     id: 5,
-    name: 'Catalog of my things',
+    name: 'Budget-App',
     description:
-          'In this project, a console app created that keep a record of different types of items owned: books, music albums, movies, and games',
+          'A mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
     stack: ['Ruby', 'Rspec', 'Rails'],
     sourceCode: 'https://github.com/manq2010/budget-app',
-    livePreview: 'https://github.com/manq2010/catalog-of-my-things',
+    livePreview: 'https://xpenses-list-dev.onrender.com/',
     image: categories,
   },
 ];
