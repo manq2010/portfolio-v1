@@ -8,6 +8,7 @@ const headerData = {
   resumePdf: resume,
   linkedIn: 'https://www.linkedin.com/in/mancoba-sihlongonyane',
   email: 'manq2010@gmail.com',
+  github: 'https://github.com/manq2010/',
 };
 
 export default headerData;

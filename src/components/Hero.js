@@ -90,7 +90,7 @@ const Hero = () => {
 
   const {
     title, description1, description2, name,
-    linkedIn, resumePdf, email,
+    linkedIn, resumePdf, email, github,
   } = headerData;
 
   const one = <h1>Hi, my name is</h1>;
@@ -144,6 +144,14 @@ const Hero = () => {
           <div
             ref={nodeRef}
           >
+            <a
+              className="link"
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
             <a
               className="link"
               href={linkedIn}

@@ -23,7 +23,7 @@ const projects = [
           '"Bookstore" is a website that allows you to display a list of books, add books to and also remove a selected book from a collection',
     stack: ['JavaScript', 'Redux', 'React'],
     sourceCode: 'https://github.com/manq2010/bookstore',
-    livePreview: 'https://react-bookstore.onrender.com/books',
+    livePreview: 'https://react-bookstore.onrender.com/',
     image: bookstore,
   },
   {
