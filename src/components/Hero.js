@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { CSSTransition } from 'react-transition-group';
 import { v4 as uuidv4 } from 'uuid';
@@ -100,12 +101,13 @@ const Hero = () => {
     <p>
       {description1}
       {' '}
-      <a
-        href="/projects"
+      <Link
+        to="/projects"
+        aria-label="projects"
         rel="noreferrer"
       >
         work
-      </a>
+      </Link>
       {'. '}
       {description2}
     </p>
