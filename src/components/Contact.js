@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
+import React, { useState } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import styled from 'styled-components';
-import { CSSTransition } from 'react-transition-group';
-import CloseIcon from '@mui/icons-material/Close';
 import { srConfig } from '../utils/config';
 import sr from '../utils/sr';
-import contactsData from '../data/contactsData';
 import mixins from '../styles/mixins';
 
 const ContactWrapper = styled.section`
@@ -39,45 +38,81 @@ flex-direction: column;
   font-size: clamp(40px, 5vw, 60px);
 }
 
-.buttons {
-  margin-top: 50px;
-}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
 
-.contact-button-open {
-  ${mixins.bigButton}
-}
+    label {
+      margin-top: 2rem;
+      font-family: var(--font-mono-family);
+      font-size: var(--fs-m);
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      color: var(--secondary);
+      font-family: var(--font-mono-family);
+    }
 
-.contact-button-close {
-  ${mixins.smallButton}
-        border: none;
-        &:hover,
-        &:focus,
-        &:active {
-        background-color: inherit;
-        border: none;
-      }
+    input,
+    textarea {
+      padding: 10px;
+      font-size: var(--fs-m);
+      background-color: var(--tertiary-lightest);
+      border-radius: var(--border-radius);
+      color: var(--primary);
+      margin-top: 2px;
+    }
 
-      &:focus,
-      &:hover {
-        color: var(--tertiary);
-        transform: translateY(-3px);
-      }
-}
+    textarea {
+      min-height: 50px;
+    }
 
-.link {
-  ${mixins.bigButton}
-  margin-left: 10px;
+    button[type='submit'] {
+      ${mixins.smallButton}
+      margin-top: 20px;
+      align-self: flex-end;
+    }
 
-}
+    .message {
+      margin-top: 20px;
+      align-content: center;
+    }
+  }
 `;
 
 const Contact = () => {
-  const revealContainer = useRef(100);
-  const [showButton, setShowButton] = useState(true);
-  const [showMessage, setShowMessage] = useState(false);
-  const nodeRef = useRef(null);
+  const [state, handleSubmit] = useForm('xvoyqvkr');
+  const { errors } = state;
+  const [emailStatus, setEmailStatus] = useState('');
 
-  useEffect(() => {
+  const revealContainer = React.useRef(100);
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    setEmailStatus('sending');
+    const { error } = await handleSubmit(event);
+    if (error) {
+      setTimeout(() => {
+        setEmailStatus('error');
+      }, 2000);
+      setTimeout(() => {
+        setEmailStatus('done');
+      }, 3000);
+    } else {
+      setTimeout(() => {
+        setEmailStatus('sent');
+      }, 2000);
+      setTimeout(() => {
+        setEmailStatus('done');
+      }, 3000);
+    }
+    event.target.reset();
+  };
+
+  React.useEffect(() => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
@@ -86,59 +121,63 @@ const Contact = () => {
       <h2 className="numbered-heading overline">What’s Next?</h2>
       <h2 className="title">Get In Touch</h2>
 
-      <div
-        className="buttons"
-      >
+      <form onSubmit={handleFormSubmit}>
+        <label htmlFor="full-name">
+          <span>Full Name</span>
+          <input
+            type="text"
+            name="name"
+            id="full-name"
+            placeholder="First and Last"
+            required
+          />
+        </label>
+        <ValidationError prefix="Text" field="text" errors={errors} />
 
-        {showButton && (
-        <button
-          type="button"
-          onClick={() => setShowMessage(true)}
-          className="contact-button-open"
-        >
-          Hit me up on ...
-        </button>
+        <label htmlFor="email">
+          <span>Your Email:</span>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            placeholder="example@gmail.com"
+          />
+        </label>
+        <ValidationError prefix="Email" field="email" errors={errors} />
+
+        <label htmlFor="message">
+          <span>Message:</span>
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="Write your message here..."
+          />
+        </label>
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={errors}
+        />
+
+        {emailStatus === 'sending' && (
+        <span className="message">Sending message...</span>
+        )}
+        {emailStatus === 'sent' && (
+          <span className="message">Message sent successfully!</span>
+        )}
+        {emailStatus === 'error' && (
+          <span className="message">Error sending message. Please try again later.</span>
+        )}
+        {emailStatus === 'done' && (
+          <span className="message" />
         )}
 
-        <CSSTransition
-          in={showMessage}
-          nodeRef={nodeRef}
-          timeout={300}
-          unmountOnExit
-          classNames="links"
-          onEnter={() => setShowButton(false)}
-          onExited={() => setShowButton(true)}
-        >
-          <div
-            ref={nodeRef}
-          >
-            <a
-              className="link"
-              href={`mailto:${contactsData.email}`}
-              onClick={() => setShowMessage(false)}
-            >
-              eMail
-            </a>
-            <a
-              className="link"
-              href={contactsData.linkedIn}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setShowMessage(false)}
-            >
-              LinkedIn
-            </a>
-            <button
-              type="button"
-              onClick={() => setShowMessage(false)}
-              className="contact-button-close"
-            >
-              <CloseIcon />
-            </button>
-          </div>
-        </CSSTransition>
-      </div>
-
+        <button type="submit" disabled={state.submitting}>
+          Send
+        </button>
+      </form>
     </ContactWrapper>
   );
 };
