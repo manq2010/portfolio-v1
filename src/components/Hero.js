@@ -12,7 +12,37 @@ const HeroWrapper = styled.section`
     flex-direction: column;
     align-items: start;
 
+    @keyframes spark {
+      0% {
+        opacity: 0.6;
+        transform: scale(0.97);
+        }
+      50% {
+        opacity: 1;
+        transform: scale(1.03);
+        }
+      100% {
+        opacity: 0.6;
+        transform: scale(0.97);
+      }
+    }
+
+    .spark {
+      display: inline-block;
+      position: relative;
+      animation: spark 3s ease-in-out infinite;
+      animation-delay: calc(var(--animation-delay) * 1s);
+    }
+
     h1 {
+      position: relative;
+      display: inline-block;
+      font-weight: 400;
+      line-height: 2;
+      margin: 0 0 20px 2px;
+      color: var(--secondary);
+      font-family: var(--font-mono);
+      text-shadow: 0 0 10px var(--secondary), 0 0 20px var(--secondary), 0 0 30px var(--secondary), 0 0 40px var(--secondary), 0 0 50px var(--secondary);
       color: var(--secondary);
       font-family: var(--font-mono);
       font-size: clamp(var(--fs-s), 5vw, var(--fs-m));
@@ -30,6 +60,32 @@ const HeroWrapper = styled.section`
       color: var(--tertiary);
       line-height: 1.2;
     }
+
+    h1 .spark,
+    h3 .spark {
+      --animation-delay: 0;
+    }
+
+    h1 .spark:nth-of-type(2),
+    h3 .spark:nth-of-type(2) {
+      --animation-delay: 0.2;
+    }
+
+    h1 .spark:nth-of-type(3),
+    h3 .spark:nth-of-type(3) {
+      --animation-delay: 0.4;
+    }
+
+    h1 .spark:nth-of-type(4),
+    h3 .spark:nth-of-type(4) {
+      --animation-delay: 0.6;
+    }
+
+    h1 .spark:nth-of-type(5),
+    h3 .spark:nth-of-type(5) {
+      --animation-delay: 0.8;
+    }
+
 
     p {
         max-width: 520px;
@@ -94,9 +150,11 @@ const Hero = () => {
     linkedIn, resumePdf, email, github,
   } = headerData;
 
-  const one = <h1>Hi, my name is</h1>;
+  // const one = <h1>Hi, my name is</h1>;
+  const one = <h1 className="spark">Hi, my name is</h1>;
   const two = <h2 className="biggest-heading">{name}</h2>;
-  const three = <h3 className="big-heading">{title}</h3>;
+  const three = <h3 className="big-heading spark">{title}</h3>;
+  // const three = <h3 className="big-heading">{title}</h3>;
   const four = (
     <p>
       {description1}
@@ -137,11 +195,12 @@ const Hero = () => {
         <CSSTransition
           in={showMessage}
           nodeRef={nodeRef}
-          timeout={300}
+          timeout={600}
           unmountOnExit
           classNames="links"
           onEnter={() => setShowButton(false)}
           onExited={() => setShowButton(true)}
+          // classNames="fadeup"
         >
           <div
             ref={nodeRef}
@@ -151,6 +210,7 @@ const Hero = () => {
               href={github}
               target="_blank"
               rel="noreferrer"
+              onClick={() => setShowMessage(false)}
             >
               GitHub
             </a>
@@ -159,6 +219,7 @@ const Hero = () => {
               href={linkedIn}
               target="_blank"
               rel="noreferrer"
+              onClick={() => setShowMessage(false)}
             >
               LinkedIn
             </a>
@@ -167,6 +228,7 @@ const Hero = () => {
               href={`mailto:${email}`}
               target="_blank"
               rel="noreferrer"
+              onClick={() => setShowMessage(false)}
             >
               Email
             </a>
