@@ -1,8 +1,8 @@
 const experienceData = [
   {
     id: 0,
-    company: 'NetAdminPros',
-    url: 'https://www.linkedin.com/company/netadminpros/',
+    company: 'Sawabox',
+    url: 'https://sawabox.com/',
     jobTitle: 'Full-stack Engineer | Projects Manager',
     range: 'January 2022 - Current',
     startYear: 'January 2022',
